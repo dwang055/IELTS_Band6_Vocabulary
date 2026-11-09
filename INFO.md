@@ -36,7 +36,8 @@ Each word entry contains: `word`, `pron` (IPA), `pos`, `def_en`, `def_zh`, `quot
 
 ## 5. Progress and privacy
 
-- Progress (flashcard boxes, settings) is stored in the browser's `localStorage` on the learner's own device.
+- Text size, language and speed settings and progress (flashcard boxes) are stored in the browser's `localStorage` on the learner's own device.
+- The daily practice record (which words you practised each day, and the days you reached your goal) and your best quiz scores are stored the same way, and are included in the Export file. On import, days and scores are merged, not overwritten.
 - Nothing is sent anywhere. Clearing browser data, or changing the repository name or web address, resets progress.
 
 ## 6. Known limits
@@ -44,16 +45,21 @@ Each word entry contains: `word`, `pron` (IPA), `pos`, `def_en`, `def_zh`, `quot
 - The Chinese, IPA and example sentences were written by an AI assistant and have not had a full teacher review.
 - The Unit 21 words are reference terms, not an official IELTS wordlist.
 - No synonyms/antonyms data is included yet.
-- There is no export/backup button for progress yet.
-- First sound on some phones needs one tap.
+- Progress backup is a manual file (Export / Import in ⚙ Settings), not automatic sync between devices.
+- On some phones the first sound needs one tap (the app shows a "Turn on sound" button).
 
-## 7. Ideas for later
+## 7. Installing, offline use and the quiz
 
-- Progress export and import (JSON).
-- A short quiz at the end of each unit review.
+- **PWA:** `manifest.webmanifest`, the three icon files and `sw.js` let the app be installed and opened offline. The service worker only runs on https (GitHub Pages) or localhost.
+- **Offline audio:** ⚙ → Offline audio downloads the mp3 files of one unit (or all) into the browser's storage. Allow roughly 95 MB for all units; a single unit is a few MB. "Remove" frees the space. A new `index.html` is picked up automatically when the device is online.
+- **Streak rule:** a day counts toward the streak when you reach your daily goal. A word counts once per day, whether you practise it on a flashcard, in Listen & Type or in the unit quiz (correct answers only).
+- **Unit quiz:** 10 questions per unit — up to 6 gap-fills taken from the review texts (the four options are words from the same unit, preferring the same part of speech) and the rest "choose the meaning". Questions and options are shuffled each time.
+
+## 8. Ideas for later
+
 - A shadowing mode (listen, pause, repeat).
 - Synonyms and antonyms for each word.
 
-## 8. Version
+## 9. Version
 
-Version 1.0 · November 2026 · © Daniel Wang · Words That Think
+Version 1.1 · November 2026 · © Daniel Wang · Words That Think
