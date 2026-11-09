@@ -18,7 +18,12 @@ Part of the **Words That Think · 品词坊 · 以词启思** family of offline 
 - **Listen & Type:** hear a word, read the Chinese hint, and type it letter by letter.
 - **Unit Review:** three short texts per unit in different styles (essay, news report, interview, dialogue and more) that use **every word of the unit**. Play them sentence by sentence or all at once, turn Chinese on or off, hide the text for listening practice, or hide the target words as a gap-fill.
 - **Works offline** once loaded. No account, no tracking. Progress is saved in your own browser.
-- **Light and dark mode**, and it works on phones and tablets.
+- **Made for phones:** bottom tab bar, large tap targets, adjustable **text size (85%–170%)**, and light/dark mode.
+- **Progress backup:** export and import your progress as a small file (⚙ Settings). The backup also holds your daily practice record and quiz scores.
+- **Daily goal and streak:** choose 5–50 words a day (⚙ Settings). A progress ring and a 🔥 day streak sit at the top of the Units page.
+- **Swipe flashcards:** swipe right for "Got it", left for "Again" (arrow keys on a computer).
+- **Unit quiz:** the last button in each Unit Review is a 10-question quiz — gap-fill from the review texts, plus "choose the meaning". Your best score shows on each unit card.
+- **Install and go offline:** add the app to your home screen, and download the audio for one unit or all units (⚙ Settings) so it works without a connection.
 
 ## How to use it
 
@@ -27,12 +32,17 @@ Part of the **Words That Think · 品词坊 · 以词启思** family of offline 
 3. Practise with **Flashcards** and **Listen & Type**.
 4. Finish each unit with its **Unit Review** texts.
 
-Tip: on a phone, tap the screen once if the first sound does not play — some browsers wait for a tap.
+Tip: on a phone, tap **Turn on sound** on the first screen — some phones block sound until you tap. Use ⚙ to change text size, speed, language and daily goal, to install the app, to download audio for offline use, and to back up your progress.
+
+**Install:** Android/Chrome — ⚙ → Install (or the browser menu → Install app). iPhone — Share → Add to Home Screen. The offline download needs the app to be opened from its web address, not from a file.
 
 ## For the repository owner
 
 ```
 index.html     the whole app (single file, no external dependencies)
+sw.js          service worker: offline use and saved audio
+manifest.webmanifest, icon-192.png, icon-512.png, apple-touch-icon.png
+               make the app installable on a phone
 audio/         4,409 mp3 files made with Edge TTS (about 95 MB)
 README.md      this file
 INFO.md        content details, sources and notes
